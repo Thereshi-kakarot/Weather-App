@@ -16,5 +16,28 @@ body{
 .container{
     height: 90%;
     width: 50%;
-    background-color:blue
+    background-color:blue;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 24px;
+}
+.input-container{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.input-container input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.material-symbols-outlined{
+    color: #333;
+    position: absolute;
+    right: 20px;
+    top: 24%;
+    font-weight: bold;
 }
