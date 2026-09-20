@@ -5,6 +5,10 @@
 }
 
 body{
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
@@ -16,7 +20,10 @@ body{
 .container{
     height: 90%;
     width: 50%;
-    background-color:blue;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */           /* Glass blur effect */
+    -webkit-backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);  
+    border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
     padding: 20px 15px;
     border-radius: 24px;
