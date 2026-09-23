@@ -52,3 +52,37 @@ body{
 .material-symbols-outlined:hover{
     cursor: pointer;
 }
+
+/* info section starts */
+.info-section{
+    display: flex;
+    margin-top: 35px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 1px solid;
+    padding: 20px 15px;
+}
+.info-section .main-weather-icon{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin-right: 20px;
+}
+.info-section .main-weather-info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin-left: 20px;
+}
+/* info section ends */
+/* Additional info section starts*/
+/*Additional Info section ends*/
