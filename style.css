@@ -85,4 +85,16 @@ body{
 }
 /* info section ends */
 /* Additional info section starts*/
+.additional-main-info{
+    display: flex;
+    margin-top: 35px;
+    align-items: left;
+    border: 1px solid;
+}
+.additional-info{
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
+    text-align: left;
+}
 /*Additional Info section ends*/
