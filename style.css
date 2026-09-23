@@ -96,5 +96,25 @@ body{
     height: 100%;
     border: 1px solid;
     text-align: left;
+    position: relative;
 }
+.additional-info h3{
+ font-size: 1rem;
+  margin: 10px 0;
+  color: #f2f2f2;
+}
+.additional-info .additional-info-value{
+    position: absolute;
+    right: 20px;
+}
+
 /*Additional Info section ends*/
+/*Forecast section starts*/
+.forecast-container{
+    display: flex;
+    margin-top: 35px;
+    height: 100px;
+    border: 1px solid;
+}
+
+/*Forecast section ends*/
