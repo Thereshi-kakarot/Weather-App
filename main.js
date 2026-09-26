@@ -1,3 +1,11 @@
+const cityName = document.getElementById("city-name");
+const temperature = document.querySelector(".temperature");
+const humidity = document.querySelector(".humidity");
+const weatherCondition = document.querySelector(".weather-condition");
+const precipitation = document.querySelector(".precipitation");
+
+
+
 function getWeatherData(city) {
     const API_KEY = CONFIG.API_KEY;
     
@@ -11,6 +19,23 @@ function getWeatherData(city) {
         .then(data => {
            renderWeatherData(data);
         })
+}
+
+function renderWeatherData(data){
+    
+    const name = data.name;
+    const temp = (data.main.temp - 273.15).toFixed(2);
+    const humid = data.main.humidity;
+    const rain = data.weather[0].main;
+    const condition = data.weather[0].description;
+
+
+    temperature.innerText = `${temp}C`;
+    humidity.innerText = `${humid}%`;
+    cityName.innerText = `${name}`;
+    precipitation.innerText = `${rain}%`;
+    weatherCondition.innerText = `${condition}`;
+
 }
 
 
