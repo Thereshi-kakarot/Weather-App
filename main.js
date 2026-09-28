@@ -42,6 +42,23 @@ function getWeatherData(city) {
         })
 }
 
+function getForecastData(city) {
+    const API_KEY = CONFIG.API_KEY;
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+        .then(response => {
+            if(!response.ok){
+                throw new Error(`Forecast data not found: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+           renderForeCastData(data);
+
+        })
+
+}
+
 function renderWeatherData(data){
     
    
@@ -71,6 +88,7 @@ searchBtn.addEventListener("click", ()=> {
     }
    
     getWeatherData(cityInput.value);
+    getForecastData(cityInput.value);
     cityName.textContent = cityInput.value;
      
 });
