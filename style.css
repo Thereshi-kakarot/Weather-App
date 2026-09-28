@@ -103,7 +103,11 @@ body{
   margin: 10px 0;
   color: #f2f2f2;
 }
-.additional-info .additional-info-value{
+.additional-info .additional-info-value-humidity{
+    position: absolute;
+    right: 20px;
+}
+.additional-info .additional-info-value-wind-speed{
     position: absolute;
     right: 20px;
 }
@@ -113,8 +117,17 @@ body{
 .forecast-container{
     display: flex;
     margin-top: 35px;
-    height: 100px;
+    height: 130px;
     border: 1px solid;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.forecast-container .forecast-card img{
+    height: 90px;
+    width: 90px;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*Forecast section ends*/
