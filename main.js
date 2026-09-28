@@ -2,7 +2,7 @@ const cityName = document.querySelector(".city-name");
 const temperature = document.querySelector(".temperature");
 const humidity = document.querySelector(".additional-info-value-humidity");
 const weatherCondition = document.querySelector(".weather-condition");
-const precipitation = document.querySelector(".additional-info-value-precipitation");
+const windSpeed = document.querySelector(".additional-info-value-wind-speed");
 const searchBtn = document.querySelector(".material-symbols-outlined");
 const cityInput = document.getElementById("city-input");
 
@@ -19,6 +19,7 @@ function getWeatherData(city) {
         })
         .then(data => {
            renderWeatherData(data);
+
         })
 }
 
@@ -29,14 +30,15 @@ function renderWeatherData(data){
     const humid = data.main.humidity;
     const rain = data.weather[0].main;
     const condition = data.weather[0].description;
-   
+    const wind = data.wind.speed;
 
 
     temperature.innerText = `${temp}°C`;
     humidity.innerText = `${humid}%`;
-    precipitation.innerText = `${rain}%`;
     weatherCondition.innerText = `${condition}`;
     cityName.innerText = `${cityInput.value}`;
+    windSpeed.innerText = `${wind} m/s`;
+   
 }
 
 searchBtn.addEventListener("click", ()=> {
@@ -48,6 +50,7 @@ searchBtn.addEventListener("click", ()=> {
    
     getWeatherData(cityInput.value);
     cityName.textContent = cityInput.value;
+     
 });
 
 
