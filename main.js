@@ -1,3 +1,22 @@
+const weatherIcons = {
+    "Clear": "clear",
+    "Clouds": "clouds",
+    "Rain": "rain",
+    "Drizzle": "drizzle",
+    "Thunderstorm": "thunderstorm",
+    "Snow": "snow",
+    "Mist": "atmosphere",
+    "Smoke": "atmosphere",
+    "Haze": "atmosphere",
+    "Dust": "atmosphere",
+    "Fog": "atmosphere",
+    "Sand": "atmosphere",
+    "Ash": "atmosphere",
+    "Squall": "atmosphere",
+    "Tornado": "atmosphere",
+    "Overcast clouds": "clouds"
+};
+
 const cityName = document.querySelector(".city-name");
 const temperature = document.querySelector(".temperature");
 const humidity = document.querySelector(".additional-info-value-humidity");
@@ -38,7 +57,10 @@ function renderWeatherData(data){
     weatherCondition.innerText = `${condition}`;
     cityName.innerText = `${cityInput.value}`;
     windSpeed.innerText = `${wind} m/s`;
+
    
+     const iconName = weatherIcons[rain] || "clouds";
+     document.getElementById("main-weather-icon-img").src = `assets/assets/weather/${iconName}.svg`;
 }
 
 searchBtn.addEventListener("click", ()=> {
