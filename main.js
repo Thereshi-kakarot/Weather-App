@@ -1,8 +1,8 @@
-const cityName = document.getElementById("city-name");
+const cityName = document.querySelector(".city-name");
 const temperature = document.querySelector(".temperature");
-const humidity = document.querySelector(".humidity");
+const humidity = document.querySelector(".additional-info-value-humidity");
 const weatherCondition = document.querySelector(".weather-condition");
-const precipitation = document.querySelector(".precipitation");
+const precipitation = document.querySelector(".additional-info-value-precipitation");
 const searchBtn = document.querySelector(".material-symbols-outlined");
 const cityInput = document.getElementById("city-input");
 
@@ -32,7 +32,7 @@ function renderWeatherData(data){
    
 
 
-    temperature.innerText = `${temp}C`;
+    temperature.innerText = `${temp}°C`;
     humidity.innerText = `${humid}%`;
     precipitation.innerText = `${rain}%`;
     weatherCondition.innerText = `${condition}`;
@@ -47,6 +47,7 @@ searchBtn.addEventListener("click", ()=> {
     }
    
     getWeatherData(cityInput.value);
+    cityName.textContent = cityInput.value;
 });
 
 
